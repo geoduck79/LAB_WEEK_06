@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Foto Kucing -->
+        <ImageView
+            android:id="@+id/cat_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src="@color/material_dynamic_neutral50" />
+
+        <!-- Nama -->
+        <TextView
+            android:id="@+id/cat_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/cat_photo"
+            app:layout_constraintTop_toTopOf="@+id/cat_photo"
+            app:layout_constraintEnd_toStartOf="@+id/cat_gender"
+            tools:text="Luna" />
+
+        <!-- Breed -->
+        <TextView
+            android:id="@+id/cat_breed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/cat_name"
+            app:layout_constraintTop_toBottomOf="@+id/cat_name"
+            app:layout_constraintEnd_toEndOf="@+id/cat_name"
+            tools:text="Maine Coon" />
+
+        <!-- Biography -->
+        <TextView
+            android:id="@+id/cat_biography"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@+id/cat_breed"
+            app:layout_constraintTop_toBottomOf="@+id/cat_breed"
+            app:layout_constraintEnd_toEndOf="@+id/cat_breed"
+            tools:text="Fluffy and gentle" />
+
+        <!-- Gender Symbol -->
+        <TextView
+            android:id="@+id/cat_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cat_name"
+            tools:text="♀" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
